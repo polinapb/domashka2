@@ -1,0 +1,214 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8"></meta>
+
+  <title>HAMMALI и NAVAI</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet"> </link>
+  
+  <link rel="stylesheet" href="https://raw.githack.com/tearsmonroe/matrix/main/matrix1.css">
+  
+  <link rel="stylesheet" href="https://raw.githack.com/tearsmonroe/matrix/main/matrix.css">
+  
+  </head>
+  
+  <body>
+  
+  <div class="landing">
+
+  <div class="box">
+  
+  <div class="header">
+
+      <ul class="links">
+	  
+	  <li><a href="#place3" style="color: white;">КОНЦЕРТ</a></li>
+
+        <li><a href="#place4" style="color: white;">АЛЬБОМ</a></li>
+
+        <li><a href="#place5" style="color: white;">КОНТАКТЫ</a></li>
+
+        <li><a href="#place2" style="color: white;">ХИТЫ</a></li>
+
+        <li><a href="#place1" style="color: white;">ABOUT</a></li>
+		
+		</ul>
+
+  </div>
+	
+<div class="info">
+
+      <h1>HAMMALI и NAVAI</h1>
+
+      <p> HAMMALI и NAVAI — это российский музыкальный дуэт, который за короткое время сумел завоевать сердца миллионов слушателей. Созданный в 2018 году, дуэт сочетает в себе уникальные музыкальные стили, объединяя элементы рэпа, поп-музыки и R&B. Их творчество отличается не только запоминающимися мелодиями, но и глубокими, эмоционально насыщенными текстами, которые затрагивают важные темы любви, отношений и жизненных переживаний. </p>
+
+      <p id="place1"> Артисты известны своим ярким сценическим образом и харизматичностью, что делает их выступления незабываемыми. Они активно работают над новыми проектами, постоянно экспериментируя со звуком и стилем, и не перестают удивлять своих поклонников новыми творческими находками. HAMMALI и NAVAI — это не просто исполнители, а настоящие создатели музыкальной атмосферы, которая находит отклик в сердцах людей. Их стремление к самосовершенствованию и искренность в творчестве делают их значимой частью российской музыкальной сцены.</p>
+	  
+<button id="spoiler_button" name="spoiler_button" type="button">ХИТЫ</button>
+
+<div class="fadeout" id="spoiler_text">
+
+ <p id=place2> Одной из самых известных работ HAMMALI и NAVAI является хит «Половина моя», который стал настоящим музыкальным феноменом и собрал миллионы прослушиваний на стриминговых платформах. Также стоит отметить такие треки, как «Снег» и «Вечная любовь», которые стали любимыми у слушателей благодаря своим трогательным текстам и мелодиям. Их музыка часто затрагивает темы любви, отношений и жизненных переживаний, что находит отклик в сердцах многих.</p>
+
+    </div>
+	
+	</div>
+
+ </div>
+ 
+ <div class="clearfix">
+
+    </div>
+
+</div>
+
+<div class="container" id="place2">
+
+  <h2 id="headline"> Концерт начнётся через: </h2>
+
+  <div id="countdown">
+
+    <ul>
+
+      <li><span id="days"></span>Дней</li>
+
+      <li><span id="hours"></span>Часов</li>
+
+      <li><span id="minutes"></span>Минут</li>
+
+      <li><span id="seconds"></span>Секунд</li>
+
+    </ul>
+
+  </div>
+
+</div>
+
+<div id="additional">
+
+  <p id=place3> HAMMALI и NAVAI готовят грандиозный концерт, который состоится в ближайшее время. Мероприятие обещает стать настоящим праздником для поклонников, где артисты представят свои самые известные хиты и новые композиции. Концерт пройдет в одном из крупных залов города, и ожидается, что билеты разлетятся очень быстро. Не упустите возможность увидеть своих любимых артистов вживую! </p>
+
+<br>
+
+ <p id=place4> Совсем скоро HAMMALI и NAVAI выпустят новый альбом, который уже вызывает большой интерес среди поклонников. Артисты обещают, что в новом проекте будут представлены как новые треки, так и неожиданные коллаборации с другими исполнителями. Альбом будет отражать их музыкальное развитие и эксперименты со звуком, а также продолжит традицию создания эмоционально насыщенной музыки. </p>
+
+<br>
+
+<p id=place5> Для получения дополнительной информации о концертах, новинках и других событиях, связанных с HAMMALI и NAVAI, вы можете посетить их официальные страницы в социальных сетях и на музыкальных платформах. Также можно подписаться на их рассылку, чтобы быть в курсе всех новостей. Следите за их творчеством и не упустите возможность стать частью их музыкального мира! </p>
+
+</div>        
+
+<script>
+   (function () {
+
+  const second = 1000,
+
+        minute = second * 60,
+
+        hour = minute * 60,
+
+        day = hour * 24;
+		
+		  let today = new Date(),
+
+      dd = String(today.getDate()).padStart(2, "0"),
+
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+
+      yyyy = today.getFullYear(),
+
+      nextYear = yyyy + 1,
+
+      dayMonth = "05/15/",  //дата окончания
+
+      date = dayMonth + yyyy;
+
+  
+
+  today = mm + "/" + dd + "/" + yyyy;
+
+  if (today > date) {
+
+    date = dayMonth + nextYear;
+
+  }
+  
+   const countDown = new Date(date).getTime(),
+
+      x = setInterval(function() {    
+
+
+
+        const now = new Date().getTime(),
+
+              distance = countDown - now;
+
+
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+
+
+        if (distance < 0) {
+
+          document.getElementById("headline").innerText = "Акция!";
+
+          document.getElementById("countdown").style.display = "none";
+
+          document.getElementById("content").style.display = "block";
+
+          clearInterval(x);
+
+        }
+
+        //seconds
+
+      }, 0)
+
+  }());
+  
+   var divToggleVis = document.getElementById('spoiler_text');
+
+var button = document.getElementById('spoiler_button');
+
+
+
+button.onclick = function() {
+
+    if (divToggleVis.className === 'fadeout') {
+
+        divToggleVis.className = 'fadein';
+
+    } else {
+
+        divToggleVis.className = 'fadeout';
+
+    }
+
+
+
+    if (button.innerHTML === 'ХИТЫ') {
+
+        button.innerHTML = 'скрыть';
+
+    } else {
+
+        button.innerHTML = 'ХИТЫ';
+
+    }
+
+};
+  
+  </script>
+  
+</body>
+
+</html>
